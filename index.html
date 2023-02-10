@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Light and Dark mode</title>
+    <link href="styles/index.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="toggle">
+    <span class="toggleIcon">🌓</span>
+</div>
+<div class="container">
+    <div class="darkMode"></div>
+</div>
+
+<div class="bio">
+    <div class="bioContainer">
+        <div class="imageContainer">
+            <span class="aasthaPic"></span>
+
+        </div>
+
+        <div class="aasthaBio">
+            <h1>About me</h1>
+            <p>I am a Web Developer with a passion for building elegant websites adhering to the best practices.
+                Skilled in HTML, CSS (Sass), JavaScript, React.JS, Gatsby.
+                I am an experienced freelance front-end developer, using the latest trends of UX/UI design to
+                provide a solid foundation to my projects. Always eager to learn new technologies or tools.</p>
+        </div>
+    </div>
+</div>
+
+
+<script>
+	let toggleMode = document.querySelector('.toggle')
+	let modeDark = document.querySelector('.darkMode')
+
+	toggleMode.addEventListener('click', () => {
+		modeDark.classList.toggle('active')
+		toggleMode.classList.toggle('active')
+	})
+</script>
+</body>
+</html>
