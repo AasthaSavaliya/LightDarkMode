@@ -9,12 +9,11 @@
 </head>
 <body>
 
-<div class="toggle">
-    <span class="toggleIcon">🌓</span>
-</div>
-<div class="container">
-    <div class="darkMode"></div>
-</div>
+<div class="darkmode-background"></div>
+<div class="darkmode-layer darkmode-layer--button"></div>
+<button aria-checked="false" aria-label="Activate dark mode" class="darkmode-toggle"
+        role="checkbox">🌓
+</button>
 
 <div class="bio">
     <div class="bioContainer">
@@ -35,12 +34,13 @@
 
 
 <script>
-	let toggleMode = document.querySelector('.toggle')
-	let modeDark = document.querySelector('.darkMode')
+	let toggleMode = document.querySelector('.darkmode-layer')
+	let modeDark = document.querySelector('.darkmode-toggle')
 
-	toggleMode.addEventListener('click', () => {
-		modeDark.classList.toggle('active')
-		toggleMode.classList.toggle('active')
+	modeDark.addEventListener('click', () => {
+		toggleMode.classList.toggle('darkmode-layer--expanded')
+		toggleMode.classList.toggle('darkmode-layer--simple')
+		modeDark.classList.toggle('darkmode-toggle--white')
 	})
 </script>
 </body>
