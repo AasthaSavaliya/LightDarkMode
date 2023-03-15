@@ -71,7 +71,7 @@ button .darkmode-layer, .darkmode-toggle {
 
 
 .darkmode-layer--expanded {
-    transform: scale(100);
+    transform: scale(200);
 }
 
 .darkmode-layer--button {
